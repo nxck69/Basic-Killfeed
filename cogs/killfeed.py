@@ -238,7 +238,11 @@ class Killfeed(commands.Cog):
                         name=f":round_pushpin: Location :round_pushpin:",
                         value=f"{map_url}",
                     )
-
+                    if random.randint(0, 100) <= 10:
+                        embed.set_footer(
+                            text="Sponsored by [DayZ++](https://killfeed.xyz)"
+                        )
+                    
                     if thumbnail_url:
                         embed.set_thumbnail(url=thumbnail_url)
 
