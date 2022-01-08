@@ -113,7 +113,7 @@ class Killfeed(commands.Cog):
 
     @staticmethod
     def get_izurvive_url(x: Any, z: Any, y: Any, service_id: int) -> str:
-        dayz_map: str | None = MAPS.get(service_id, "chernarus")
+        dayz_map: str = MAPS.get(service_id, "chernarus")
         match dayz_map.lower():
             case "livonia":
                 return f"[{x}, {z}, {y}](https://www.izurvive.com/livonia/#location={x};{z})"
